@@ -1,0 +1,7 @@
+{
+  "name": "Copy of .ICS Generator - Image, text, camera, or URL",
+  "description": "Upload an event flyer, calendar screenshot, or spreadsheet to automatically extract event details and generate a downloadable .ics calendar file.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

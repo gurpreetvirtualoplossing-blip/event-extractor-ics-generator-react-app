@@ -1,0 +1,22 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    
+    # Allow access to API directory
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    
+    # Route /api/* to api/index.php
+    RewriteRule ^api/(.*)$ api/index.php [QSA,L]
+    
+    # Route /health to api/index.php
+    RewriteRule ^health$ api/index.php [QSA,L]
+</IfModule>
+
+# Increase upload limits for large images
+php_value upload_max_filesize 50M
+php_value post_max_size 50M
+php_value memory_limit 256M
+php_value max_execution_time 300
+php_value max_input_time 300
+
